@@ -1,0 +1,30 @@
+<section>
+    <slot name="header"/>
+    <slot name="body" />
+    <slot />
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        padding: 1.5rem;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    @media (min-width: 800px) and (max-width: 1279px) {
+        section {
+            padding: 6rem;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        section {
+            padding: 8rem;
+            gap: 2rem;
+        }
+    }
+</style>

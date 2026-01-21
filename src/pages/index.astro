@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import PageLayout from '../layouts/PageLayout.astro';
+import PageSection from '../components/PageSection.astro';
 
 // Component Imports
 import {
@@ -31,8 +32,8 @@ import {
 			<p class="caption-1">I'm a designer...</p>
 		</div>
 
-		<div id="featured">
-			<h2>Featured</h2>
+		<PageSection id="featured">
+			<h2 slot="header">Featured</h2>
 			<div class="card-grid">
 				<Card>
 					<CardHeader>
@@ -45,11 +46,11 @@ import {
 					</CardHeader>
 				</Card>
 			</div>
-		</div>
+		</PageSection>
 
-		<div id="testimonials">
-			<h2>Testimonials</h2>
+		<PageSection id="testimonials">
+			<h2 slot="header">Testimonials</h2>
 			<!-- carousel -->
-		</div>
+		</PageSection>
 	</PageLayout>
 </html>
