@@ -1,0 +1,24 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+import ProjectHeader from "../components/project/ProjectHeader.astro"
+import Footer from "../components/navigation/Footer.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    heroImage: string;
+}
+
+const { title, description, heroImage } = Astro.props;
+---
+
+<BaseLayout>
+    <ProjectHeader 
+        title={title} description={description} heroImage={heroImage}
+    />
+
+    <section class="page-content">
+        <slot />
+        <Footer />
+    </section>
+</BaseLayout>
