@@ -50,6 +50,15 @@
   --font-helvetica: 'Helvetica', 'Arial', sans-serif;
   --font-inter: 'Inter', 'Helvetica',sans-serif;
 
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 3.5rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 7rem;
+  
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -123,48 +132,57 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    font-size: 18px;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
+
   /* Fonts */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    margin: 0 0 1rem 0;
+    font-weight: bold;
+    line-height: 120%;
+    letter-spacing: -1%;
+    margin: 0;
   }
 
   p {
     font-family: 'Inter', 'Helvetica', sans-serif;
-    margin: 0 0 1rem 0;
+    margin: 0;
   }
 
   /* Mobile-first base sizes */
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.25rem; }
   h4 { font-size: 1.25rem; }
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.875rem; }
-  p  { font-size: 1rem; }
+  /* h5 { font-size: 1rem; }
+  h6 { font-size: 0.875rem; } */
+  p  { font-size: 0.875rem; }
 
   /* Tablet (md) */
-  @media (min-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2.25rem; }
-    h3 { font-size: 2rem; }
-    h4 { font-size: 1.5rem; }
-    h5 { font-size: 1.25rem; }
-    h6 { font-size: 1rem; }
-    p  { font-size: 1.125rem; }
+  @media (min-width: 800px) and (max-width: 1279px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    /* h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; } */
+    p  { font-size: 0.875rem; }
   }
 
   /* Desktop (lg) */
-  @media (min-width: 1200px) {
-    h1 { font-size: 3rem; }
-    h2 { font-size: 2.5rem; }
-    h3 { font-size: 2.25rem; }
-    h4 { font-size: 1.75rem; }
-    h5 { font-size: 1.5rem; }
-    h6 { font-size: 1.25rem; }
-    p  { font-size: 1.25rem; }
+  @media (min-width: 1280px) {
+    h1 { font-size: 4rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.5rem; }
+    /* h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.25rem; } */
+    p  { font-size: 1rem; }
   }
 }

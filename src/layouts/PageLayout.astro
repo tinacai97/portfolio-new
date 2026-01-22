@@ -5,9 +5,41 @@ import Footer from "../components/navigation/Footer.astro";
 ---
 
 <BaseLayout>
-    <section class="page-content">
-        <slot />
-    </section>
-
-    <Footer />
+    <div id="main-content">
+        <slot name="header"/>
+        <div id="page-body">
+            <slot />
+            <Footer />
+        </div>
+    </div>
 </BaseLayout>
+
+<style>
+	#main-content {
+		width: 100%;
+		max-width: 1200px;
+		display: flex;
+		flex-direction: column;
+	}
+
+    #page-body {
+        display: flex;
+        flex-direction: column;
+        padding: var(--spacing-lg) var(--spacing-md);
+        gap: var(--spacing-2xl);
+    }
+
+	@media (min-width: 800px) and (max-width: 1279px) {
+        #page-body {
+            padding: var(--spacing-2xl);
+            gap: var(--spacing-3xl);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        #page-body {
+            padding: var(--spacing-3xl);
+            gap: var(--spacing-4xl);
+        }
+    }
+</style>

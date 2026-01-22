@@ -17,40 +17,34 @@ import {
 // https://docs.astro.build/basics/astro-components/
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Test Server</title>
-	</head>
+<PageLayout>
+	<div slot="header" id="hero">
+		<h1>Hi I'm Tina</h1>
+		<p class="caption-1">I'm a designer...</p>
+	</div>
 
-	<PageLayout>
-		<div id="hero">
-			<h1>Hi I'm Tina</h1>
-			<p class="caption-1">I'm a designer...</p>
+	<PageSection id="featured">
+		<h2 slot="header">Featured</h2>
+		<div class="card-grid">
+			<Card>
+				<CardHeader>
+					<CardTitle>
+						Project Title
+					</CardTitle>
+					<CardDescription>
+						Brief description of the project goes here.
+					</CardDescription>
+				</CardHeader>
+			</Card>
 		</div>
+	</PageSection>
 
-		<PageSection id="featured">
-			<h2 slot="header">Featured</h2>
-			<div class="card-grid">
-				<Card>
-					<CardHeader>
-						<CardTitle>
-							Project Title
-						</CardTitle>
-						<CardDescription>
-							Brief description of the project goes here.
-						</CardDescription>
-					</CardHeader>
-				</Card>
-			</div>
-		</PageSection>
+	<PageSection id="testimonials">
+		<h2 slot="header">Testimonials</h2>
+		<!-- carousel -->
+	</PageSection>
 
-		<PageSection id="testimonials">
-			<h2 slot="header">Testimonials</h2>
-			<!-- carousel -->
-		</PageSection>
-	</PageLayout>
-</html>
+	<a href="/projects">View Projects</a>
+	<a href="/projects/mesh">View Mesh</a>
+</PageLayout>
+

@@ -1,0 +1,36 @@
+---
+import 'src/styles/global.css';
+import PageLayout from '@/layouts/PageLayout.astro';
+import ImageHeader from '@/components/navigation/ImageHeader.astro';
+import PageSection from '@/components/page/PageSection.astro';
+
+// Component Imports
+---
+
+<PageLayout>
+	<ImageHeader slot="header">
+		<h1 slot="title" class="text-4xl font-bold">I'm Tina Cai</h1>
+		<p slot="subtitle" class="text-lg text-muted-foreground mt-2">/ˈtiː.nə kaɪ/</p>
+        <img slot="img" class="header-image" src="/images/project-header-bg.png" alt="Project Header Background Image" />
+	</ImageHeader>
+
+	<PageSection>
+		<h1 slot="header">Bio</h1>
+        <p slot="body">
+            I'm a UX Design Specialist at SAP in the Bay Area, California. I strongly believe in centering my work around design thinking and user advocacy, as showcased here in my hand-coded design portfolio. 
+            <br>
+            My teammates have described me as social, intelligent, and unafraid to voice ideas despite being new to design. I genuinely value self improvement and helping others do the same by volunteering for design lectures, workshops, and social events. Reach out to learn more about my design journey and to share yours!
+        </p>
+        <!-- timeline -->
+	</PageSection>
+
+	<PageSection>
+		<h1 slot="header">My Design Path</h1>
+	</PageSection>
+
+	<PageSection>
+		<h1 slot="header">Outside of Design</h1>
+        <p slot="body"> When not designing, you might find me exploring outdoor activities, playing video games, or cuddling my kitty!</p>
+        <!-- hobbies grid -->
+	</PageSection>
+</PageLayout>

@@ -8,23 +8,19 @@
     section {
         display: flex;
         flex-direction: column;
-        max-width: 1200px;
-        padding: 1.5rem;
-        margin: 0;
-        gap: 1rem;
+        width: 100%;
+        gap: var(--spacing-md);
     }
 
     @media (min-width: 800px) and (max-width: 1279px) {
         section {
-            padding: 6rem;
-            gap: 1.5rem;
+            gap: var(--spacing-lg);
         }
     }
 
     @media (min-width: 1280px) {
         section {
-            padding: 8rem;
-            gap: 2rem;
+            gap: var(--spacing-xl);
         }
     }
 </style>

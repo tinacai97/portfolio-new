@@ -1,9 +1,41 @@
+---
+import { Button, buttonVariants } from '../ui/button.tsx';
+---
+
 <footer>
-    <div class="footer-content">
+    <div id="footer-content">
         <h3>Lets collaborate</h3>
         <p>Interested in working together? I’d love to chat! ☕ </p>
     </div>
-    <button class="button btn--footer" id="footer-btn" aria-label="Contact Button">
-        Lets chat
-    </button>
+    <Button variant="default">Lets chat</Button>
 </footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: space-between;
+        width: 100%;
+        padding: var(--spacing-lg);
+        background-color: purple;
+        color: white;
+        text-align: left;
+        gap: var(--spacing-md);
+    }
+
+    #footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    @media (min-width: 800px) {
+        footer {
+            flex-direction: row;
+            align-items: center;
+            padding: var(--spacing-2xl);
+            gap: var(--spacing-lg);
+        }
+    }
+</style>
