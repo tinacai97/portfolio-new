@@ -18,13 +18,13 @@ import {
 ---
 
 <PageLayout>
-	<div slot="header" id="hero">
-		<h1>Hi I'm Tina</h1>
-		<p class="caption-1">I'm a designer...</p>
+	<div class="w-full" slot="header" id="hero">
+		<h1 class="text-on-surface">Hi I'm Tina</h1>
+		<p class="text-on-surface-variant text-2xl">I'm a designer...</p>
 	</div>
 
 	<PageSection id="featured">
-		<h2 slot="header">Featured</h2>
+		<h2 slot="header" class="text-on-surface">Featured</h2>
 		<div class="card-grid">
 			<Card>
 				<CardHeader>
@@ -40,11 +40,8 @@ import {
 	</PageSection>
 
 	<PageSection id="testimonials">
-		<h2 slot="header">Testimonials</h2>
+		<h2 slot="header" class="text-on-surface">Testimonials</h2>
 		<!-- carousel -->
 	</PageSection>
-
-	<a href="/projects">View Projects</a>
-	<a href="/projects/mesh">View Mesh</a>
 </PageLayout>
 

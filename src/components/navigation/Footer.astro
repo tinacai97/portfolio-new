@@ -4,8 +4,8 @@ import { Button, buttonVariants } from '../ui/button.tsx';
 
 <footer>
     <div id="footer-content">
-        <h3>Lets collaborate</h3>
-        <p>Interested in working together? I’d love to chat! ☕ </p>
+        <h3 class="text-(--on-surface)">Lets collaborate</h3>
+        <p class="text-(--on-surface-variant)">Interested in working together? I’d love to chat! ☕ </p>
     </div>
     <Button variant="default">Lets chat</Button>
 </footer>
@@ -18,8 +18,8 @@ import { Button, buttonVariants } from '../ui/button.tsx';
         justify-content: space-between;
         width: 100%;
         padding: var(--spacing-lg);
-        background-color: purple;
-        color: white;
+        background-color: var(--surface-container);
+        border-radius: var(--radius);
         text-align: left;
         gap: var(--spacing-md);
     }
@@ -28,6 +28,14 @@ import { Button, buttonVariants } from '../ui/button.tsx';
         display: flex;
         flex-direction: column;
         gap: var(--spacing-sm);
+    }
+
+    h3 {
+        color: var(--on-surface);
+    }
+
+    p {
+        color: var(--on-surface-variant);
     }
 
     @media (min-width: 800px) {

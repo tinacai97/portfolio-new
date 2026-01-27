@@ -15,16 +15,57 @@ const { content } = Astro.props;
 		/>
 	</head>
 	<!-- Navigation -->
-	<body>
-		<slot />
-	</body>
-	
+
+	<div class="drawer lg:drawer-open">
+		<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+		<div class="drawer-content flex flex-col items-center justify-start">
+			<!-- Page content here -->
+			 	<body>
+					<main class="w-full">
+						<slot />
+					</main>
+				</body>
+
+			<label for="my-drawer-3" class="btn drawer-button lg:hidden">
+			Open drawer
+			</label>
+		</div>
+		<div class="drawer-side">
+			<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+			<ul class="fixed top-4 bottom-4 menu bg-surface-container-high rounded-2xl max-h-screen w-80">
+			<!-- Sidebar content here -->
+				<!-- logo -->
+				<!-- top section -->
+				<hr class="solid border-outline-variant border-t-[0.5px]">
+				<li><a>Sidebar Item 1</a></li>
+				<li><a>Sidebar Item 2</a></li>
+				<!-- bottom section -->
+				<hr class="solid border-outline-variant border-t-[0.5px]">
+			</ul>
+		</div>
+	</div>
 </html>
 
 <style>
+	main {
+		padding-left: 336px;
+	}
+
 	body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding: var(--spacing-md);
+		background-color: var(--surface);
+	}
+
+	a {
+		color: var(--on-surface);
+	}
+
+	@media (max-width: 1279px) {
+		body, main {
+			padding-left: 0;
+		}
 	}
 </style>

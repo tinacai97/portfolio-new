@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+// GET OUT NOOOOWWWWW
 export function SidebarScratch() {
     const [open, setOpen] = useState(false);
 
@@ -22,6 +22,10 @@ export function SidebarScratch() {
         {renderedContent}
     </SidebarSurface>
   );
+}
+
+function MenuIcon() {
+    return <img src="" />
 }
 
 function SidebarSurface({ children }: { children: React.ReactNode }) {

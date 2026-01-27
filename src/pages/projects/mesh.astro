@@ -1,12 +1,20 @@
 ---
 import ProjectLayout from "@/layouts/ProjectLayout.astro";
 import PageSection from "@/components/page/PageSection.astro";
+import ImageHeader from "@/components/navigation/ImageHeader.astro";
 ---
 
 <ProjectLayout
     title="Mesh"
     description="A 3D modeling and animation software project."
     heroImage="/images/projects/mesh/hero.png">
+
+    <ImageHeader>
+		<h1 slot="title" class="text-(--on-surface)">Mesh</h1>
+		<p slot="subtitle" class="text-(--on-surface-variant) text-xl">/Designing a networking hub for early tech talents to get their feet in the door./</p>
+        <img slot="img" class="header-image" src="/images/project-header-bg.png" alt="Project Header Background Image" />        
+    </ImageHeader>
+
     <PageSection>
         <h2 slot="header">Problem</h2>
         <p slot="body">Early tech talent are not getting traction through traditional job application methods. The roles early PM, designer, and developers apply for often have 100+ applications. Eventually, most receive a templated rejection email. This problem is close to our hearts as everyone in our team has persevered through this challenge. We created Mesh to help tech talent explore a more effective approach to launch their careers.</p>

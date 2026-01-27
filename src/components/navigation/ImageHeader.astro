@@ -1,4 +1,4 @@
-<header>
+<header class="bg-surface-container-high">
     <div class="header-content">
         <slot name="title"/>
         <slot name="subtitle"/>
@@ -15,15 +15,15 @@
     header {
         display: flex;
         flex-direction: column;
-        align-items: right;
+        align-items: center;
         justify-content: center;
         width: 100%;
+        min-height: 456px;
         padding: var(--spacing-md);
-        background-color: #6b21a8; /* Purple background */
-        color: white;
+        background-color: var(--surface-container-high);
         text-align: left;
         gap: var(--spacing-lg);
-        overflow: hidden;
+        border-radius: var(--radius);
     }
 
     .header-content {
@@ -47,5 +47,6 @@
             display: flex;
             flex-direction: row;
             padding-left: var(--spacing-xl);
+            height: 456px;
         }
     }
