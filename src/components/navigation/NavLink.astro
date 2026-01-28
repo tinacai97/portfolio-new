@@ -1,0 +1,84 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  href: string;
+  label: string;
+  active?: boolean;
+  icon?: string;
+}
+
+const { href, label, active = false, icon } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "navlink",
+    active && "navlink--active"
+  ]}
+>
+  {icon && (
+      <span class="navlink__icon">
+        <Icon name={icon} width="24" height="24" />
+      </span>
+)}
+
+  <span class="navlink__label">
+    {label}
+  </span>
+</a>
+
+<style>
+
+ span {
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+ }
+
+.navlink {
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    padding: var(--spacing-md) var(--spacing-md);
+    border-radius: var(--radius-2xl);
+
+    text-decoration: none;
+    color: var(--on-surface);
+
+  
+    transition: var(--tertiary-color) 120ms ease;
+}
+
+.navlink:hover {
+  background-color: var(--tertiary-container);
+}
+
+.navlink:hover .navlink__label {
+  font-weight: 600;
+}
+
+.navlink--active {
+    background: var(--secondary-container);
+}
+
+.navlink--active .navlink__label {
+    font-weight: 600;
+}
+
+.navlink__icon {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+}
+
+.navlink__label {
+  white-space: nowrap;
+}
+</style>

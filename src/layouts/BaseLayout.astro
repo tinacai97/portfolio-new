@@ -1,4 +1,5 @@
 ---
+import NavLink from '@/components/navigation/NavLink.astro';
 import '../styles/global.css';
 
 const { content } = Astro.props;
@@ -32,15 +33,44 @@ const { content } = Astro.props;
 		</div>
 		<div class="drawer-side">
 			<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-			<ul class="fixed top-4 bottom-4 menu bg-surface-container-high rounded-2xl max-h-screen w-80">
+			<ul class="fixed top-4 bottom-4 menu bg-surface-container-high rounded-2xl max-h-screen w-80 gap-2">
 			<!-- Sidebar content here -->
 				<!-- logo -->
+				<div class="flex flex-row justify-between items-center w-full px-4 py-4">
+					<img src="/tcai.svg" alt="logo" class="w-18 h-auto" />
+				</div>
+				<hr class="solid border-outline-variant border-t-[0.5px]">
 				<!-- top section -->
+				<div class="flex flex-col justify-start px-2 py-4 gap-1">
+					<li>
+						<NavLink href="/" label="Home" icon="bx:home" active></NavLink>
+					</li>
+					<li>
+						<NavLink href="/projects" label="Projects" icon="bx:rocket"></NavLink>
+					</li>
+					<li>
+						<NavLink href="/about" label="About" icon="bx:smile"></NavLink>
+					</li>
+					<li>
+						<NavLink href="/blogs" label="Blogs" icon="bx:chat"></NavLink>
+					</li>
+				</div>
 				<hr class="solid border-outline-variant border-t-[0.5px]">
-				<li><a>Sidebar Item 1</a></li>
-				<li><a>Sidebar Item 2</a></li>
 				<!-- bottom section -->
-				<hr class="solid border-outline-variant border-t-[0.5px]">
+				<div class="flex flex-col justify-start px-2 py-4 gap-1">
+					
+						<NavLink href="/" label="Resume" icon="bx:file"></NavLink>
+					</li>
+					<li>
+						<NavLink href="/" label="Email" icon=""></NavLink>
+					</li>
+					<li>
+						<NavLink href="/" label="LinkedIn" icon=""></NavLink>
+					</li>
+					<li>
+						<NavLink href="/" label="GitHub" icon=""></NavLink>
+					</li>
+				</div>
 			</ul>
 		</div>
 	</div>
@@ -49,6 +79,7 @@ const { content } = Astro.props;
 <style>
 	main {
 		padding-left: 336px;
+		justify-items: center;
 	}
 
 	body {
