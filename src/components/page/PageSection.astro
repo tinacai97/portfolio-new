@@ -1,5 +1,5 @@
 <section>
-    <slot name="header"/>
+    <slot name="header" />
     <slot name="body" />
     <slot />
 </section>
@@ -9,18 +9,18 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
     }
 
     @media (min-width: 800px) and (max-width: 1279px) {
         section {
-            gap: var(--spacing-lg);
+            gap: var(--spacing-xl);
         }
     }
 
     @media (min-width: 1280px) {
         section {
-            gap: var(--spacing-xl);
+            gap: var(--spacing-2xl);
         }
     }
 </style>

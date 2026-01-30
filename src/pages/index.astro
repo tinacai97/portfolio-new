@@ -12,36 +12,98 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import tempImage from '../img/temp.avif';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <PageLayout>
-	<div class="w-full" slot="header" id="hero">
+	<div class="w-full bg-surface-container-high rounded-2xl" slot="header" id="hero">
 		<h1 class="text-on-surface">Hi I'm Tina</h1>
-		<p class="text-on-surface-variant text-2xl">I'm a designer...</p>
+		<p class="text-on-surface-variant ">I'm a designer...</p>
 	</div>
 
 	<PageSection id="featured">
-		<h2 slot="header" class="text-on-surface">Featured</h2>
-		<div class="card-grid">
-			<Card>
-				<CardHeader>
-					<CardTitle>
-						Project Title
-					</CardTitle>
-					<CardDescription>
-						Brief description of the project goes here.
-					</CardDescription>
-				</CardHeader>
-			</Card>
+		<h2 slot="header" class="text-on-surface px-6">My selection of recent projects</h2>
+		<div class="flex flex-row justify-between w-full gap-2" id="card-grid">
+			<div class="flex flex-col justify-bewtween h-full w-full gap-2">
+				<Card className="rounded-2xl bg-surface-container">
+					<img src={tempImage.src} alt="Project Image" class="max-h-[280px] rounded-t-2xl"/>
+					<CardHeader>
+						<CardTitle className="text-on-surface"><h4>Design Portfolio</h4>
+						</CardTitle>
+						<CardDescription className="text-on-surface-variant">
+							<p>Brief description of the project goes here.</p>
+						</CardDescription>
+					</CardHeader>
+				</Card>
+
+				<Card className="rounded-2xl bg-surface-container">
+					<img src={tempImage.src} alt="Project Image" class="max-h-[280px] rounded-t-2xl"/>
+					<CardHeader>
+						<CardTitle className="text-on-surface"><h4>Design Portfolio</h4></CardTitle>
+						<CardDescription className="text-on-surface-variant">
+							<p>Brief description of the project goes here.</p>
+						</CardDescription>
+					</CardHeader>
+				</Card>
+			</div>
+			<div class="h-full w-full gap-2">
+				<Card className="h-full rounded-2xl bg-surface-container">
+					<img src={tempImage.src} alt="Project Image" class="rounded-t-2xl"/>
+					<CardHeader>
+						<CardTitle className="text-on-surface"><h4>Design Portfolio</h4></CardTitle>
+						<CardDescription className="text-on-surface-variant">
+							<p>Brief description of the project goes here.</p>
+						</CardDescription>
+					</CardHeader>
+				</Card>				
+			</div>
 		</div>
 	</PageSection>
 
 	<PageSection id="testimonials">
-		<h2 slot="header" class="text-on-surface">Testimonials</h2>
+		<h2 slot="header" class="text-on-surface px-6">Testimonials</h2>
 		<!-- carousel -->
 	</PageSection>
 </PageLayout>
 
+<style>
+	#hero {
+		padding: var(--spacing-md)
+	}
+	@media (max-width: 799px) {
+		#card-grid {
+			flex-direction: column;
+		}
+	}
+
+	  /* Tablet (md) */
+  @media (min-width: 800px) and (max-width: 1279px) {
+    h1 { font-size: 6rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    /* h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; } */
+    p  { font-size: 1rem; }
+	#hero {
+		padding: var(--spacing-lg)
+  }
+}
+
+  /* Desktop (lg) */
+  @media (min-width: 1280px) {
+    h1 { font-size: 7.5rem; }
+    h2 { font-size: 3.5rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.5rem; }
+    /* h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.25rem; } */
+    p  { font-size: 1rem; }
+	#hero {
+		padding: 12rem var(--spacing-4xl)
+  }
+}
+</style>

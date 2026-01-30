@@ -53,6 +53,8 @@
   --spacing-2xl: 3.5rem;
   --spacing-3xl: 5rem;
   --spacing-4xl: 7rem;
+  --spacing-5xl: 9rem;
+  --spacing-6xl: 12rem;
   
 
   /* Primary */
@@ -141,15 +143,15 @@
   /* Fonts */
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     font-weight: 500;
     line-height: 120%;
-    letter-spacing: 0%;
+    letter-spacing: 0.2px;
     margin: 0;
   }
 
-    h1, h3 {
-    font-weight: 700;
+  h1 {
+    letter-spacing: -1px;
   }
 
   p {
@@ -158,7 +160,7 @@
   }
 
   /* Mobile-first base sizes */
-  h1 { font-size: 2.5rem; }
+  h1 { font-size: 4rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.25rem; }
   h4 { font-size: 1.25rem; }
@@ -168,8 +170,8 @@
 
   /* Tablet (md) */
   @media (min-width: 800px) and (max-width: 1279px) {
-    h1 { font-size: 3.5rem; }
-    h2 { font-size: 2.5rem; }
+    h1 { font-size: 5rem; }
+    h2 { font-size: 3rem; }
     h3 { font-size: 1.5rem; }
     h4 { font-size: 1.25rem; }
     /* h5 { font-size: 1.25rem; }
@@ -179,8 +181,8 @@
 
   /* Desktop (lg) */
   @media (min-width: 1280px) {
-    h1 { font-size: 5rem; }
-    h2 { font-size: 3rem; }
+    h1 { font-size: 6rem; }
+    h2 { font-size: 3.5rem; }
     h3 { font-size: 2rem; }
     h4 { font-size: 1.5rem; }
     /* h5 { font-size: 1.5rem; }
